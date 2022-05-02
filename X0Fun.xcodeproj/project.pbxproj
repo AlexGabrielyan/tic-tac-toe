@@ -19,6 +19,9 @@
 		443E3362280EA46500C57D5C /* PlayWithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443E3361280EA46500C57D5C /* PlayWithViewController.swift */; };
 		BE10558F280F201300EF4D87 /* PlayWithCompViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE10558E280F201300EF4D87 /* PlayWithCompViewController.swift */; };
 		BE105591280F202D00EF4D87 /* PlayWithPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE105590280F202D00EF4D87 /* PlayWithPlayerViewController.swift */; };
+		BE8688552820591400EA267F /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8688542820591400EA267F /* PlayerViewModel.swift */; };
+		BE8688572820593200EA267F /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8688562820593200EA267F /* CardViewModel.swift */; };
+		BE86885B2820597B00EA267F /* PlayEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE86885A2820597B00EA267F /* PlayEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +56,11 @@
 		443E3352280E965A00C57D5C /* X0FunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X0FunUITests.swift; sourceTree = "<group>"; };
 		443E3354280E965A00C57D5C /* X0FunUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X0FunUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		443E3361280EA46500C57D5C /* PlayWithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithViewController.swift; sourceTree = "<group>"; };
-		BE10558E280F201300EF4D87 /* PlayWithCompViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithCompViewController.swift; sourceTree = SOURCE_ROOT; };
+		BE10558E280F201300EF4D87 /* PlayWithCompViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlayWithCompViewController.swift; path = "X0Fun/New Group/PlayWithCompViewController.swift"; sourceTree = SOURCE_ROOT; };
 		BE105590280F202D00EF4D87 /* PlayWithPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithPlayerViewController.swift; sourceTree = "<group>"; };
+		BE8688542820591400EA267F /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		BE8688562820593200EA267F /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		BE86885A2820597B00EA267F /* PlayEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +111,12 @@
 		443E3330280E965600C57D5C /* X0Fun */ = {
 			isa = PBXGroup;
 			children = (
+				BE86885C282059AB00EA267F /* View */,
+				BE8688592820596A00EA267F /* Controller */,
+				BE8688582820595700EA267F /* ViewModel */,
 				443E3331280E965600C57D5C /* AppDelegate.swift */,
 				443E3333280E965600C57D5C /* SceneDelegate.swift */,
 				443E3335280E965600C57D5C /* StartViewController.swift */,
-				443E3337280E965600C57D5C /* Main.storyboard */,
-				BE10558E280F201300EF4D87 /* PlayWithCompViewController.swift */,
-				BE105590280F202D00EF4D87 /* PlayWithPlayerViewController.swift */,
 				443E333A280E965A00C57D5C /* Assets.xcassets */,
 				443E333C280E965A00C57D5C /* LaunchScreen.storyboard */,
 				443E333F280E965A00C57D5C /* Info.plist */,
@@ -134,6 +140,33 @@
 				443E3354280E965A00C57D5C /* X0FunUITestsLaunchTests.swift */,
 			);
 			path = X0FunUITests;
+			sourceTree = "<group>";
+		};
+		BE8688582820595700EA267F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BE8688542820591400EA267F /* PlayerViewModel.swift */,
+				BE8688562820593200EA267F /* CardViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BE8688592820596A00EA267F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE86885A2820597B00EA267F /* PlayEngine.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE86885C282059AB00EA267F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE10558E280F201300EF4D87 /* PlayWithCompViewController.swift */,
+				BE105590280F202D00EF4D87 /* PlayWithPlayerViewController.swift */,
+				443E3337280E965600C57D5C /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,9 +302,12 @@
 			files = (
 				443E3362280EA46500C57D5C /* PlayWithViewController.swift in Sources */,
 				443E3336280E965600C57D5C /* StartViewController.swift in Sources */,
+				BE86885B2820597B00EA267F /* PlayEngine.swift in Sources */,
 				443E3332280E965600C57D5C /* AppDelegate.swift in Sources */,
 				443E3334280E965600C57D5C /* SceneDelegate.swift in Sources */,
+				BE8688572820593200EA267F /* CardViewModel.swift in Sources */,
 				BE10558F280F201300EF4D87 /* PlayWithCompViewController.swift in Sources */,
+				BE8688552820591400EA267F /* PlayerViewModel.swift in Sources */,
 				BE105591280F202D00EF4D87 /* PlayWithPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
