@@ -8,24 +8,31 @@
 import UIKit
 
 class PlayWithCompViewController: UIViewController {
-    @IBAction func compButton(_ sender: UIButton) {
-    }
+    
+    var playEngine: PlayEngine?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let firsPlayer = PlayerViewModel(name: "Alex", score: 0, isMyTurn: true)
+        let computerPlayer = PlayerViewModel(name: "Computer", score: 0, isMyTurn: false)
+        playEngine = PlayEngine(firstPlayer: firsPlayer, secondPlayer: computerPlayer)
+        
+        playEngine?.onWin = { player in
+            if player != nil {
+                self.showWinAlert(name: player?.name)
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func showWinAlert(name: String?) {
+        let alert = UIAlertController(title: name, message: "Win!!!", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
-    */
+    
+    @IBAction func compButton(_ sender: UIButton) {
+        //print(sender.tag)
+        playEngine?.buttonPressed(tag: sender.tag)
+    }
 
 }
