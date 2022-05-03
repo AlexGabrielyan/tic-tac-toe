@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct PlayerViewModel {
+    let name: String
+    var score: Int
+    var isMyTurn: Bool
+    var cards: [CardViewModel]?
+}
