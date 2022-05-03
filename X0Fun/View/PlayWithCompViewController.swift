@@ -8,6 +8,9 @@
 import UIKit
 
 class PlayWithCompViewController: UIViewController {
+  
+    @IBOutlet var buttonImageesView: [UIImageView]!
+
     
     var playEngine: PlayEngine?
     
