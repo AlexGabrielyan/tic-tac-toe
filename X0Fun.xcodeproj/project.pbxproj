@@ -18,6 +18,7 @@
 		443E3355280E965A00C57D5C /* X0FunUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443E3354280E965A00C57D5C /* X0FunUITestsLaunchTests.swift */; };
 		443E3362280EA46500C57D5C /* PlayWithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443E3361280EA46500C57D5C /* PlayWithViewController.swift */; };
 		44F13DCF28205D260049B419 /* PlayWithCompViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F13DCE28205D260049B419 /* PlayWithCompViewController.swift */; };
+		44FFD5482821BE3D0021F1DB /* XOButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FFD5472821BE3D0021F1DB /* XOButton.swift */; };
 		BE105591280F202D00EF4D87 /* PlayWithPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE105590280F202D00EF4D87 /* PlayWithPlayerViewController.swift */; };
 		BE8688552820591400EA267F /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8688542820591400EA267F /* PlayerViewModel.swift */; };
 		BE8688572820593200EA267F /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8688562820593200EA267F /* CardViewModel.swift */; };
@@ -57,6 +58,7 @@
 		443E3354280E965A00C57D5C /* X0FunUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X0FunUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		443E3361280EA46500C57D5C /* PlayWithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithViewController.swift; sourceTree = "<group>"; };
 		44F13DCE28205D260049B419 /* PlayWithCompViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayWithCompViewController.swift; sourceTree = "<group>"; };
+		44FFD5472821BE3D0021F1DB /* XOButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XOButton.swift; sourceTree = "<group>"; };
 		BE105590280F202D00EF4D87 /* PlayWithPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWithPlayerViewController.swift; sourceTree = "<group>"; };
 		BE8688542820591400EA267F /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		BE8688562820593200EA267F /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
@@ -111,9 +113,7 @@
 		443E3330280E965600C57D5C /* X0Fun */ = {
 			isa = PBXGroup;
 			children = (
-				BE86885C282059AB00EA267F /* View */,
-				BE8688592820596A00EA267F /* Controller */,
-				BE8688582820595700EA267F /* ViewModel */,
+				44FFD5462821BDFD0021F1DB /* PlayerVSComp */,
 				443E3331280E965600C57D5C /* AppDelegate.swift */,
 				443E3333280E965600C57D5C /* SceneDelegate.swift */,
 				443E3335280E965600C57D5C /* StartViewController.swift */,
@@ -121,6 +121,7 @@
 				443E333C280E965A00C57D5C /* LaunchScreen.storyboard */,
 				443E333F280E965A00C57D5C /* Info.plist */,
 				443E3361280EA46500C57D5C /* PlayWithViewController.swift */,
+				44FFD5452821BD7C0021F1DB /* Common */,
 			);
 			path = X0Fun;
 			sourceTree = "<group>";
@@ -140,6 +141,24 @@
 				443E3354280E965A00C57D5C /* X0FunUITestsLaunchTests.swift */,
 			);
 			path = X0FunUITests;
+			sourceTree = "<group>";
+		};
+		44FFD5452821BD7C0021F1DB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				44FFD5472821BE3D0021F1DB /* XOButton.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		44FFD5462821BDFD0021F1DB /* PlayerVSComp */ = {
+			isa = PBXGroup;
+			children = (
+				BE86885C282059AB00EA267F /* View */,
+				BE8688592820596A00EA267F /* Controller */,
+				BE8688582820595700EA267F /* ViewModel */,
+			);
+			path = PlayerVSComp;
 			sourceTree = "<group>";
 		};
 		BE8688582820595700EA267F /* ViewModel */ = {
@@ -302,6 +321,7 @@
 			files = (
 				443E3362280EA46500C57D5C /* PlayWithViewController.swift in Sources */,
 				443E3336280E965600C57D5C /* StartViewController.swift in Sources */,
+				44FFD5482821BE3D0021F1DB /* XOButton.swift in Sources */,
 				BE86885B2820597B00EA267F /* PlayEngine.swift in Sources */,
 				443E3332280E965600C57D5C /* AppDelegate.swift in Sources */,
 				443E3334280E965600C57D5C /* SceneDelegate.swift in Sources */,

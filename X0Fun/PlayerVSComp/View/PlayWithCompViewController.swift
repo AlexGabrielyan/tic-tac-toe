@@ -8,10 +8,7 @@
 import UIKit
 
 class PlayWithCompViewController: UIViewController {
-  
-    @IBOutlet var buttonImageesView: [UIImageView]!
 
-    
     var playEngine: PlayEngine?
     
     override func viewDidLoad() {
@@ -33,9 +30,11 @@ class PlayWithCompViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func compButton(_ sender: UIButton) {
+    @IBAction func compButton(_ sender: XOButton) {
         //print(sender.tag)
         playEngine?.buttonPressed(tag: sender.tag)
+        sender.xoImageView.image = UIImage(named: "xik3")
+        //sender.backgroundColor = .brown
     }
 
 }
