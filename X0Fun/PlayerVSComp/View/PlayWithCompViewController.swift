@@ -8,8 +8,18 @@
 import UIKit
 
 class PlayWithCompViewController: UIViewController {
-
+    
     var playEngine: PlayEngine?
+    enum Turn {
+        case Xik
+        case oik
+    }
+    
+    var firstTurn = Turn.Xik
+    var currentTurn = Turn.Xik
+    
+    var ZERO = "oik"
+    var CROSS = "xik"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +43,20 @@ class PlayWithCompViewController: UIViewController {
     @IBAction func compButton(_ sender: XOButton) {
         //print(sender.tag)
         playEngine?.buttonPressed(tag: sender.tag)
-        sender.xoImageView.image = UIImage(named: "xik3")
+        //        sender.xoImageView.image = UIImage(named:"0ik")
         //sender.backgroundColor = .brown
+        swichThePic(sender)
     }
-
+    
+    func swichThePic(_ sender: XOButton) {
+        if (sender.xoImageView.image == nil) {
+            if(currentTurn == Turn.oik){
+                sender.xoImageView.image = UIImage(named: ZERO)
+            } else if (currentTurn == Turn.Xik){
+                sender.xoImageView.image = UIImage(named: CROSS)
+            }
+        }
+    }
+    
 }
+
