@@ -8,7 +8,7 @@
 import Foundation
 
 struct CardViewModel {
-    let isSelected: Bool
+    var isSelected: Bool
     let tag: Int
-    let selectedItemImageName: String?
+    var selectedItemImageName: String?
 }
